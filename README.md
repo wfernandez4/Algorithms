@@ -1,0 +1,1 @@
+This repository contains all my own original versions of common algorithms.
