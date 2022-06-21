@@ -1,7 +1,8 @@
 def recmult(x,y):
 
-    # If the max length of either of the two string is odd, this will divide x and y appropriately.
-    # This handles odd numbers that may be incorrectly divided otherwise.
+    # This recursive algorithm can handle largest integers of even or odd length. However, we subtract
+    # 1 from from n if the largest number is odd. This is to make sure the formula is using the correct 
+    # exponents.
 
     n = max(len(str(x)), len(str(y)))
     if n%2 != 0:
@@ -25,4 +26,4 @@ def recmult(x,y):
 
         return int((10**n)*(recmult(a,c)) + (10**(n/2))*(recmult(a,d)+recmult(b,c))+recmult(b,d))
         
-print(recmult(34443, 333))
+print(recmult(123456, 123))
